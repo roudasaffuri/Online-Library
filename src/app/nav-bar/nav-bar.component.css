@@ -1,0 +1,20 @@
+.navigation {
+    background-color:#CCA255;
+    text-align: center;
+    font-size: 20px;
+	padding: 15px;
+    opacity:  0.8;
+}
+.navigationLink {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+.navigationLink:hover {
+ background-color:black; 
+ padding:11px ;
+}
+.navigationLink.selected{
+    background-color: black;
+    padding:11px ;
+}
