@@ -1,1 +1,18 @@
-<p>books-in-library works!</p>
+<!-- display.component.html -->
+<div *ngIf="formData.length > 0">
+    <h2>Book Details</h2>
+    <div *ngFor="let formData of formData">
+      <ul>
+        <li><strong>Book Name:</strong> {{ formData.bookName }}</li>
+        <li><strong>Author:</strong> {{ formData.authorName }}</li>
+        <li><strong>Quantity:</strong> {{ formData.quantity }}</li>
+        <li><strong>Category:</strong> {{ formData.category }}</li>
+        <!-- Display image if available -->
+        <li *ngIf="formData.image">
+          <strong>Image:</strong>
+          <img [src]="getImageUrl(formData.image)" alt="Book Image">
+        </li>
+      </ul>
+    </div>
+  </div>
+  
