@@ -1,18 +1,15 @@
-<!-- display.component.html -->
-<div *ngIf="formData.length > 0">
-    <h2>Book Details</h2>
-    <div *ngFor="let formData of formData">
+<h1 *ngIf="formData.length > 0">Book Details</h1>
+<div class="container" *ngIf="formData.length > 0">
+    <div class="book-details" *ngFor="let formData of formData">
       <ul>
-        <li><strong>Book Name:</strong> {{ formData.bookName }}</li>
-        <li><strong>Author:</strong> {{ formData.authorName }}</li>
-        <li><strong>Quantity:</strong> {{ formData.quantity }}</li>
-        <li><strong>Category:</strong> {{ formData.category }}</li>
-        <!-- Display image if available -->
-        <li *ngIf="formData.image">
-          <strong>Image:</strong>
-          <img [src]="getImageUrl(formData.image)" alt="Book Image">
-        </li>
+        <li *ngIf="formData.image"><img [src]="getImageUrl(formData.image)"></li>
+        <li *ngIf="!formData.image">
+          <img src="../assets/Img/No-Image.png"></li>
+        <li *ngIf="formData.bookName"><strong>Book Name:</strong> {{ formData.bookName }}</li>
+        <li *ngIf="formData.authorName"><strong>Author:</strong> {{ formData.authorName }}</li>
+        <li *ngIf="formData.quantity"><strong>Quantity:</strong> {{ formData.quantity }}</li>
+        <li *ngIf="formData.category"><strong>Category:</strong> {{ formData.category }}</li>
       </ul>
     </div>
   </div>
-  
+  <h1 *ngIf="formData.length == 0">NO BOOKS ADDED</h1>

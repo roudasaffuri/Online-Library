@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+.container{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.book-details {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    background-color: beige;
+  }
+  .book-details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .book-details li {
+    margin-bottom: 10px;
+  }
+  
+  .book-details img {
+    max-width: 100%;
+    height: auto;
+  }
