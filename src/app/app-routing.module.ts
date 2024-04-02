@@ -15,8 +15,7 @@ const routes: Routes = [
   { path: 'books-out-oflibrary', component:BooksOutOFLibraryComponent },
   { path: 'books-out-oflibrary', component:BooksOutOFLibraryComponent },
   { path: 'settings', component:SettingsComponent },
-  { path: '**', component:PageNotFoundComponent
- },
+  { path: '**', component:PageNotFoundComponent},
 ];
 
 @NgModule({
