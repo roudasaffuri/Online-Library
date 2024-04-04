@@ -1,6 +1,9 @@
 <div class="container">
     <div class="content">
       <input type="text" [(ngModel)]="name" pattern="[a-zA-Z ]*" placeholder="Enter manager name">
-      <button (click)="addName()" [disabled]="names.length >= 2 || !isValidName(name)">Submit</button>
+      <button (click)="addName()" [disabled]="names.length >= 2 || !isValidName(name)">Submit</button><br>
+      <label>Toggle Mode</label>
+<input type="checkbox" (change)="toggleDarkMode()">
     </div>
 </div>
+
