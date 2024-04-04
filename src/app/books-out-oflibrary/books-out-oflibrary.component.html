@@ -1,1 +1,20 @@
-<p>books-out-oflibrary works!</p>
+<form class="form1" (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+    <input type="text" placeholder="SEARCH BOOK NAME" ngModel name="book-input" required #bookInput='ngModel' />
+    <button type="submit" [disabled]="!form.valid">Search</button>
+  
+  </form>
+  
+  <div class="container" *ngIf="allBooks.length > 0">
+    <div class="book-details" *ngFor="let Book of allBooks">
+      <ul>
+        <li *ngIf="Book.volumeInfo.imageLinks.thumbnail">
+        <img [src]="Book.volumeInfo.imageLinks.thumbnail"></li>
+        <li *ngIf="Book.volumeInfo.title"><strong>Book Name:</strong> {{ Book.volumeInfo.title }}</li>
+  
+        <li *ngIf="Book.volumeInfo.authors[0]"><strong>Author:</strong> {{ Book.volumeInfo.authors[0]}}</li>
+  
+        <li *ngIf="Book.volumeInfo.categories[0]"><strong>Category:</strong> {{ Book.volumeInfo.categories[0] }}</li>
+      </ul>
+    </div>
+  </div>
