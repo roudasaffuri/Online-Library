@@ -3,15 +3,15 @@
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label>Book Name:</label><br>
     <input type="text" id="name" name="name" required [(ngModel)]="bookName"><br>
-    <small *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)">Book Name is required.</small>
+    <small *ngIf="form.controls['name']?.invalid && (form.controls['name'].dirty || form.controls['name'].touched)">Book Name is required.</small>
     <br>
     <label>Book Author:</label><br>
     <input type="text" id="AuthorName" name="author" pattern='^[A-Za-z ]+$' required [(ngModel)]="authorName"><br>
-    <small *ngIf="form.controls['author'].invalid && (form.controls['author'].dirty || form.controls['author'].touched)">Name is required(only Letters).</small>
+    <small *ngIf="form.controls['author']?.invalid && (form.controls['author'].dirty || form.controls['author'].touched)">Name is required(only Letters).</small>
     <br>
     <label>Quantity:</label><br>
     <input type="number" id="Qnt" name="quantity" required [(ngModel)]="quantity"><br>
-    <small *ngIf="form.controls['quantity'].invalid && (form.controls['quantity'].dirty || form.controls['quantity'].touched)">Quantity is required.</small>
+    <small *ngIf="form.controls['quantity']?.invalid && (form.controls['quantity'].dirty || form.controls['quantity'].touched)">Quantity is required.</small>
     <br>
     <label>Category:</label><br>
     <select id="category" name="category" required [(ngModel)]="category">
@@ -22,7 +22,7 @@
       <option value="Adventure">Adventure</option>
       <option value="Mystery">Mystery</option>
     </select><br>
-    <small *ngIf="form.controls['category'].invalid && (form.controls['category'].dirty || form.controls['category'].touched)">Choose a category.</small>
+    <small *ngIf="form.controls['category']?.invalid && (form.controls['category'].dirty || form.controls['category'].touched)">Choose a category.</small>
     <br>
     <label>Image:</label><br>
     <input type="file" id="image" name="image" accept="image/*" required (change)="onFileSelected($event)"><br>
