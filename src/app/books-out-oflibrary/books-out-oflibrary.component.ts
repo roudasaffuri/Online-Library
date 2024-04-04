@@ -19,22 +19,27 @@ export class BooksOutOFLibraryComponent {
       // alert(`${this.bookName} done successfully`);
       console.log(`Book Name: ${this.bookName}`);
       this.getBooks(this.bookName);
-
-  }}
+    }  
+  }
  
   getBooks(book: string): void {
    
     // Example:https://www.googleapis.com/books/v1/volumes?q=harry+potter
 this.bookName=this.bookName.replace(/ /g, '+');
 
-    this.http.get<any>(`https://www.googleapis.com/books/v1/volumes?q=${this.bookName}`).subscribe(
-      (response) => {
-        const items = response.items;
-        this.allBooks=items;
-        console.log(this.allBooks.length);
-      },
-      );
-      this.allBooks = [];// to allow new search
+this.http.get<any>('https://www.googleapis.com/books/v1/volumes?q='+this.bookName).subscribe(
+  (response) => {
+    const items = response.items;
+    for (let i = 0; i < items.length; i++) {
+      let item = items[i];
+      if ('volumeInfo' in item && 'categories' in item.volumeInfo) {
+        this.allBooks.push(item);
+      }
+    }
+    // this.allBooks=items;
+    // console.log(this.allBooks.length);
+  },
+  );
+  this.allBooks = [];// to allow new search
   }
-
 }
