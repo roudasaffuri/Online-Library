@@ -27,9 +27,4 @@ The project is an online library application built with Angular and TypeScript. 
 - **Angular**: For developing components and managing data flow.
 - **CSS/SCSS**: For styling the interface, including dark mode support.
 
-### Additional Features
-- **Responsive Design**: Ensures accessibility on various devices.
-- **User-Friendly Interface**: Simplifies the process of adding and searching for books.
 
-### Summary
-The online library project offers a seamless user experience for book lovers, allowing them to efficiently manage their collections while enjoying a modern interface with dark mode support. Integration with the Google Books API enhances the search functionality, making it easy to discover new titles.
