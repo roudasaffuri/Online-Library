@@ -27,4 +27,9 @@ The project is an online library application built with Angular and TypeScript. 
 - **Angular**: For developing components and managing data flow.
 - **CSS/SCSS**: For styling the interface, including dark mode support.
 
+![Screenshot 2024-09-20 204516](https://github.com/user-attachments/assets/75764550-198d-4f7a-8193-c1b36a704b9b)
+![Screenshot 2024-09-20 204841](https://github.com/user-attachments/assets/45909867-5d8d-4354-979d-9ad4c58a8213)
+![Screenshot 2024-09-20 204901](https://github.com/user-attachments/assets/a7c83598-3966-4d39-abc0-dd0220976769)
+![Screenshot 2024-09-20 204947](https://github.com/user-attachments/assets/18d0090c-bc75-4e3f-a1c2-b3ebae9b8982)
+![Screenshot 2024-09-20 205010](https://github.com/user-attachments/assets/3814a960-3cea-42e3-8eee-5fe0bf343db4)
 
